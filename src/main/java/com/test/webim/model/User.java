@@ -1,5 +1,7 @@
 package com.test.webim.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Collection;
@@ -31,6 +33,9 @@ public class User {
 
     @Column(name = "last_name")
     private String lastName;
+
+    @OneToOne(mappedBy = "user")
+    private Token token;
 
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
@@ -103,6 +108,14 @@ public class User {
 
     public void setRoles(Collection<Role> roles) {
         this.roles = roles.isEmpty() ? Collections.<Role>emptySet() : EnumSet.copyOf(roles);
+    }
+
+    public Token getToken() {
+        return token;
+    }
+
+    public void setToken(Token token) {
+        this.token = token;
     }
 
     @Override

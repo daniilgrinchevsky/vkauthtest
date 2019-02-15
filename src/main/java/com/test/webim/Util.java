@@ -13,14 +13,14 @@ public class Util {
 
      final static String USER_AGENT = "Mozilla/5.0";
 
-     final static String authURL = "https://oauth.vk.com/authorize?client_id=6853219&display=popup&redirect_uri=https://vkauthtest.herokuapp.com/callback/vk&scope=friends&response_type=code&v=5.92";
+     final static String authURL = "https://oauth.vk.com/authorize?client_id=6853219&display=popup&redirect_uri=http://localhost:8080/callback/vk&scope=friends&response_type=code&v=5.92";
 
      final static String accessURL = "https://oauth.vk.com/access_token?client_id=6853219" +
-            "&client_secret=2KumGIn4tq40s6NgVTS1&redirect_uri=https://vkauthtest.herokuapp.com/callback/vk&code=%s";
+            "&client_secret=2KumGIn4tq40s6NgVTS1&redirect_uri=http://localhost:8080/callback/vk&code=%s";
 
-     final static String GET_FRIENDS = "https://api.vk.com/method/friends.get?user_id=%s&fields=photo_100&count=5&access_token=%s&v=5.92";
+    public final static String GET_FRIENDS = "https://api.vk.com/method/friends.get?user_id=%s&fields=photo_100&count=5&access_token=%s&v=5.92";
 
-     final static String GET_PROFILE_INFO = "https://api.vk.com/method/users.get?user_ids=%s&access_token=%s&v=5.92";
+    public final static String GET_PROFILE_INFO = "https://api.vk.com/method/users.get?user_ids=%s&access_token=%s&v=5.92";
 
     public static JSONObject serialized(String ResponseCode) throws Exception {
         JSONParser parser = new JSONParser();
