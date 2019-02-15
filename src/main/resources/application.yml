@@ -1,0 +1,14 @@
+
+oauth2:
+client:
+  id: vk
+  clientId: 6853219
+  clientSecret: 2KumGIn4tq40s6NgVTS1
+  accessTokenUri: https://oauth.vk.com/access_token
+  userAuthorizationUri: https://oauth.vk.com/authorize
+  tokenName: code
+  authenticationScheme: query
+  clientAuthenticationScheme: form
+  scope: friends
+  resource:
+    userInfoUri: https://api.vk.com/method/users.get
