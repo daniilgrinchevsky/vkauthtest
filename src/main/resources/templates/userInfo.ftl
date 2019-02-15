@@ -11,5 +11,4 @@
         </#list>
         </div>
     </ul>
-    ${session}
 </@c.page>
